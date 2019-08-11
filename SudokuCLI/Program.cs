@@ -28,8 +28,9 @@ namespace SudokuCLI
                 {1, 2, 3},
                 {1, 0, 1}
             };
+            sudoku.SolveSudoku(board);
             int boardSize = Convert.ToInt16(Math.Sqrt(smallBoard.Length));
-            var test = sudoku.isValidCol(smallBoard, boardSize, 0, 1, 2);
+            var test = sudoku.isValidSubgridValue(board, Convert.ToInt16(Math.Sqrt(smallBoard.Length)), 4, 3, 2);
             sudoku.printBoard(smallBoard, boardSize);
             Console.WriteLine(sudoku.getColFirstEmptyCell(smallBoard, boardSize));
             Console.WriteLine(sudoku.getRowFirstEmptyCell(smallBoard, boardSize));

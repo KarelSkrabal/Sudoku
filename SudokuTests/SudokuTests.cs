@@ -1,5 +1,6 @@
 ﻿using SudokuSolver;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 
 namespace SudokuSolver.Tests
 {
@@ -23,6 +24,28 @@ namespace SudokuSolver.Tests
                 { 0, 0, 1}};
 
         Sudoku sudoku = new SudokuSolver.Sudoku();
+
+        [TestMethod()]
+        public void isValidSubgripValueTest_returns_FALSE()
+        {
+            int[] testValues = new int[] { 2,5,7,4,3 };
+
+            foreach(var value in testValues)
+            {
+                Assert.IsFalse(sudoku.isValidSubgridValue(board, Convert.ToInt16(System.Math.Sqrt(board.Length)), 8, 7, value));
+            }            
+        }
+
+        [TestMethod()]
+        public void isValidSubgripValueTest_returns_TRUE()
+        {
+            int[] testValues = new int[] { 1, 6,8,9};
+
+            foreach (var value in testValues)
+            {
+                Assert.IsTrue(sudoku.isValidSubgridValue(board, Convert.ToInt16(System.Math.Sqrt(board.Length)), 8, 8, value));
+            }
+        }
 
         [TestMethod()]
         public void isValidRowTest_returns_FALSE()
