@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace SudokuSolver
 {
@@ -44,6 +46,7 @@ namespace SudokuSolver
      */
     public class Sudoku
     {
+        private static int lastAssignedValue = -1;
         /*
             {3, 0, 6, 5, 0, 8, 4, 0, 0},
             {5, 2, 0, 0, 0, 0, 0, 0, 0},
@@ -59,6 +62,15 @@ namespace SudokuSolver
         {
             int row = getRowFirstEmptyCell(board, 9);
             int col = getColFirstEmptyCell(board, 9);
+            var test = PossibleRowValues(board, 9, row, col);
+            var test1 = PossibleColValues(board, 9, row, col);
+            var test2 = PossibleSubgridValues(board, 9, row, col);
+
+            var test3 = test.Intersect(test1).Intersect(test2).ToList<int>();
+
+            HashSet<int> possibleValues = new HashSet<int>();
+
+            //possibleValues.Add()
 
             if(row == null && col == null)
             {
@@ -66,8 +78,14 @@ namespace SudokuSolver
             }
             for(int i=1;i<=9;i++)
             {
-                ;
+                if(lastAssignedValue == i)
+                {
+                    continue;
+                }
+                lastAssignedValue = i;
                 board[row, col] = i;
+                printBoard(board, 9);
+                Console.WriteLine("___________________");
                 bool validRow = isValidRow(board, 9, row, col, i);
                 bool validCol = isValidCol(board, 9, row, col, i);
                 bool validSubgrid = isValidSubgridValue(board, 9, row, col, i);
@@ -113,6 +131,47 @@ namespace SudokuSolver
             }
             return true;
         }
+        public IEnumerable<int> PossibleSubgridValues(int[,] board, int boardSize, int rowTested, int colTested)
+        {
+            int[] allValues = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            int[] actualRow = new int[boardSize];
+            int i = 0;
+            boardSize = (int)Math.Sqrt(boardSize);
+            int rowLowerBound = (int)Math.Truncate(rowTested / (decimal)boardSize) * boardSize;
+            int rowUpperBound = ((int)Math.Truncate(rowTested / (decimal)boardSize) * boardSize) + 2;
+            int colLowerBound = (int)Math.Truncate(colTested / (decimal)boardSize) * boardSize;
+            int colUpperBound = ((int)Math.Truncate(colTested / (decimal)boardSize) * boardSize) + 2;
+            ;
+            for (int row = rowLowerBound; row <= rowUpperBound; row++)
+            {
+                for (int col = colLowerBound; col <= colUpperBound; col++)
+                {
+                    if (board[row, col] != 0)
+                    {
+                        actualRow[i] = board[row, col];
+                        i++;
+                    }
+                }
+            }
+            IEnumerable<int> ret = allValues.Except(actualRow).Where((r) => r != 0);
+            return ret;
+        }
+        public IEnumerable<int> PossibleRowValues(int[,] board, int boardSize, int rowTested, int colTested)
+        {
+            int[] allValues = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            int[] actualRow = new int[boardSize];
+            int i = 0;
+            for (int c = 0; c < boardSize; c++)
+            {
+                if (board[rowTested, c] != 0)
+                {
+                    actualRow[i] = board[rowTested, c];
+                    i++;
+                }
+            }
+            IEnumerable<int> ret = allValues.Except(actualRow).Where((r) => r != 0);
+            return ret;
+        }
         public bool isValidCol(int[,] board, int boardSize, int rowTested, int colTested, int valueTested)
         {
             for (int r = 0; r < boardSize; r++)
@@ -147,6 +206,22 @@ namespace SudokuSolver
             return true;
         }
 
+        public IEnumerable<int> PossibleColValues(int[,] board, int boardSize, int rowTested, int colTested)
+        {
+            int[] allValues = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            int[] actualRow = new int[boardSize];
+            int i = 0;
+            for (int r = 0; r < boardSize; r++)
+            {
+                if (board[r, colTested] != 0)
+                {
+                    actualRow[i] = board[r,colTested];
+                    i++;
+                }
+            }
+            IEnumerable<int> ret = allValues.Except(actualRow).Where((r) => r != 0);
+            return ret;
+        }
         public int getRowFirstEmptyCell(int[,] board, int boardSize)
         {
             int ret = -1;
