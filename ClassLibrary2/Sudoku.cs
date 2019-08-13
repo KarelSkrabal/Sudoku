@@ -38,15 +38,10 @@ namespace SudokuSolver
         7,8
         i=0,1,2
         i*delka,i*delka+2
-
-        delka = 3
-        for(r=
-            for(c
                 
      */
     public class Sudoku
     {
-        private static int lastAssignedValue = -1;
         /*
             {3, 0, 6, 5, 0, 8, 4, 0, 0},
             {5, 2, 0, 0, 0, 0, 0, 0, 0},
@@ -60,70 +55,66 @@ namespace SudokuSolver
          */
         public bool SolveSudoku(int[,] board)
         {
-            int row = getRowFirstEmptyCell(board, 9);
-            int col = getColFirstEmptyCell(board, 9);
-            var test = PossibleRowValues(board, 9, row, col);
-            var test1 = PossibleColValues(board, 9, row, col);
-            var test2 = PossibleSubgridValues(board, 9, row, col);
-
-            var test3 = test.Intersect(test1).Intersect(test2).ToList<int>();
-
-            HashSet<int> possibleValues = new HashSet<int>();
-
-            //possibleValues.Add()
-
-            if(row == null && col == null)
+            int row = -1;
+            int col = -1;
+            row = getRowFirstEmptyCell(board, 9);
+            col = getColFirstEmptyCell(board, 9);
+            if (row == -1 && col == -1)
             {
                 return true;
             }
-            for(int i=1;i<=9;i++)
+            var rowPossibleValues = PossibleRowValues(board, 9, row, col);
+            var colPossibleValues = PossibleColValues(board, 9, row, col);
+            var subgridPossibleValues = PossibleSubgridValues(board, 9, row, col);
+
+            var possibleValues = rowPossibleValues.Intersect(colPossibleValues).Intersect(subgridPossibleValues).ToList<int>();
+
+            if (row == null && col == null)
             {
-                if(lastAssignedValue == i)
+                return true;
+            }
+            //for(int i=1;i<=9;i++)
+            foreach (var value in possibleValues)
+            {
+                board[row, col] = value;
+                bool validRow = isValidRow(board, 9, row, col, value);
+                bool validCol = isValidCol(board, 9, row, col, value);
+                bool validSubgrid = isValidSubgridValue(board, 9, row, col, value);
+                if (validCol && validRow && validSubgrid)
                 {
-                    continue;
-                }
-                lastAssignedValue = i;
-                board[row, col] = i;
-                printBoard(board, 9);
-                Console.WriteLine("___________________");
-                bool validRow = isValidRow(board, 9, row, col, i);
-                bool validCol = isValidCol(board, 9, row, col, i);
-                bool validSubgrid = isValidSubgridValue(board, 9, row, col, i);
-                if(validCol && validRow && validSubgrid)
-                {
-                    if(SolveSudoku(board))
+                    if (SolveSudoku(board))
                     {
-                        printBoard(board,9);
+                        //printBoard(board, 9);
                         return true;
                     }
                     else
                     {
-                        continue;
+                        board[row, col] = 0;
                     }
-                }              
+                }
             }
-
+            //board[row, col] = 0;
             return false;
         }
 
         public bool isValidSubgridValue(int[,] board, int boardSize, int rowTested, int colTested, int valueTested)
         {
             boardSize = (int)Math.Sqrt(boardSize);
-            int rowLowerBound = (int)Math.Truncate(rowTested/(decimal)boardSize) * boardSize;
-            int rowUpperBound = ((int)Math.Truncate(rowTested / (decimal)boardSize) * boardSize)+2;
+            int rowLowerBound = (int)Math.Truncate(rowTested / (decimal)boardSize) * boardSize;
+            int rowUpperBound = ((int)Math.Truncate(rowTested / (decimal)boardSize) * boardSize) + 2;
             int colLowerBound = (int)Math.Truncate(colTested / (decimal)boardSize) * boardSize;
             int colUpperBound = ((int)Math.Truncate(colTested / (decimal)boardSize) * boardSize) + 2;
             ;
-            for(int row = rowLowerBound;row <= rowUpperBound; row++)
+            for (int row = rowLowerBound; row <= rowUpperBound; row++)
             {
-                for(int col = colLowerBound; col <= colUpperBound; col++)
+                for (int col = colLowerBound; col <= colUpperBound; col++)
                 {
-                    if(row == rowTested && col == colTested)
+                    if (row == rowTested && col == colTested)
                     {
                         continue;
                     }
 
-                    if(board[row,col] == valueTested)
+                    if (board[row, col] == valueTested)
                     {
                         return false;
                     }
@@ -215,7 +206,7 @@ namespace SudokuSolver
             {
                 if (board[r, colTested] != 0)
                 {
-                    actualRow[i] = board[r,colTested];
+                    actualRow[i] = board[r, colTested];
                     i++;
                 }
             }
@@ -258,8 +249,6 @@ namespace SudokuSolver
 
         public void printBoard(int[,] board, int boardSize)
         {
-            //todo - check for value from interval 3-9 
-
             for (int r = 0; r < boardSize; r++)
             {
                 for (int c = 0; c < boardSize; c++)

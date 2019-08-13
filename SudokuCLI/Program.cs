@@ -29,11 +29,14 @@ namespace SudokuCLI
                 {1, 0, 1}
             };
             sudoku.SolveSudoku(board);
+            sudoku.printBoard(board,9);
+            /*
             int boardSize = Convert.ToInt16(Math.Sqrt(smallBoard.Length));
             var test = sudoku.isValidSubgridValue(board, Convert.ToInt16(Math.Sqrt(smallBoard.Length)), 4, 3, 2);
             sudoku.printBoard(smallBoard, boardSize);
             Console.WriteLine(sudoku.getColFirstEmptyCell(smallBoard, boardSize));
             Console.WriteLine(sudoku.getRowFirstEmptyCell(smallBoard, boardSize));
+            */
             Console.ReadKey();
         }
 
