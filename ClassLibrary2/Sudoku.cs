@@ -46,7 +46,7 @@ namespace SudokuSolver
     public class Sudoku
     {
         public readonly int boardSize = 9;
-        private int[] allValues = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+        private readonly int[] allValues = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
         public bool SolveSudoku(int[,] board)
         {
             int row = -1;
