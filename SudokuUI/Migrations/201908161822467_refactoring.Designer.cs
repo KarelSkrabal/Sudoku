@@ -7,13 +7,13 @@ namespace SudokuUI.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class first : IMigrationMetadata
+    public sealed partial class refactoring : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(first));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(refactoring));
         
         string IMigrationMetadata.Id
         {
-            get { return "201908161206264_first"; }
+            get { return "201908161822467_refactoring"; }
         }
         
         string IMigrationMetadata.Source

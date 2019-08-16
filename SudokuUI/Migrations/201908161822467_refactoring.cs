@@ -3,7 +3,7 @@ namespace SudokuUI.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class first : DbMigration
+    public partial class refactoring : DbMigration
     {
         public override void Up()
         {
@@ -11,11 +11,13 @@ namespace SudokuUI.Migrations
                 "dbo.Puzzles",
                 c => new
                     {
-                        puzzleId = c.Int(nullable: false, identity: true),
-                        cell = c.String(),
+                        iD = c.Int(nullable: false, identity: true),
+                        puzzleId = c.Int(nullable: false),
+                        row = c.Int(nullable: false),
+                        col = c.Int(nullable: false),
                         value = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.puzzleId);
+                .PrimaryKey(t => t.iD);
             
         }
         

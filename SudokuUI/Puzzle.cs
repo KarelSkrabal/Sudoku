@@ -9,11 +9,15 @@ namespace SudokuUI
 {
     public class Puzzle
     {
-        [Key]
+
+        public int iD { get; set; }
+
         public int puzzleId { get; set; }
-        [Required]
         
-        public string cell { get; set; }
+        public int row { get; set; }
+        
+        public int col { get; set; }
+        
         public int value { get; set; }
 
     }
