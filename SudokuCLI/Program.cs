@@ -69,7 +69,7 @@ namespace SudokuCLI
             sudoku.SolveSudoku(board);
             sudoku.printBoard(board);
             stopWatch.Stop();
-            Console.WriteLine(stopWatch.Elapsed);
+            Console.WriteLine(stopWatch.ElapsedMilliseconds);
 
             Console.ReadKey();
         }
