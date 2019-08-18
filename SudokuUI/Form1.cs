@@ -12,64 +12,77 @@ using System.Windows.Forms;
 
 namespace SudokuUI
 {
-    public partial class Form1 : Form
+    public partial class frmMain : Form
     {
-        public Form1()
+        Dictionary<Tuple<int, int>, TextBox> board = new Dictionary<Tuple<int, int>, TextBox>();
+
+        public frmMain()
         {
             InitializeComponent();
+
+            initBoard();
+
+            foreach(var cell in board)
+            {
+                cell.Value.Text = Convert.ToString(0);
+                cell.Value.TextChanged += new EventHandler(textBoxProperty);
+                cell.Value.Enter += new EventHandler(textBoxProperty);
+            }
+           
+        }
+
+
+        private void initBoard()
+        {
+            for (int r = 0; r < 9; r++)
+            {
+                for (int c = 0; c < 9; c++)
+                {
+                    TextBox tbx = this.Controls.Find("textBox" + Convert.ToString(r) + Convert.ToString(c), true).FirstOrDefault() as TextBox;
+                    if (tbx == null)
+                    {
+                        throw new Exception("TextBoxes on the form are not correct");
+                    }
+                    else
+                    {
+                        board.Add(new Tuple<int, int>(r, c), tbx);
+                    }
+                }
+            }
+        }
+
+        private void textBoxProperty(object sender, EventArgs e)
+        {
+            Regex regularExpression = new Regex(@"^[0-9]$");
+            if (!regularExpression.IsMatch(((TextBox)sender).Text))
+            {
+                ((TextBox)sender).Text = string.Empty;
+            }
+
+            HideCaret(((TextBox)sender).Handle);
         }
 
         [DllImport("user32.dll")]
         static extern bool HideCaret(IntPtr hWnd);
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            Regex regularExpression = new Regex(@"^[1-9]$");
-            if (regularExpression.IsMatch(textBox1.Text))
+            Regex regularExpression = new Regex(@"^[0-9]$");
+            if (!regularExpression.IsMatch(textBox00.Text))
             {
-                ;
+                ((TextBox)sender).Text = string.Empty;
             }
-            else
-            {
-                textBox1.Text = "";
-            }
-            HideCaret(textBox1.Handle);
+
+            HideCaret(textBox00.Handle);
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void frmMain_Shown(object sender, EventArgs e)
         {
-            Regex regularExpression = new Regex(@"^[1-9]$");
-            if (regularExpression.IsMatch(textBox2.Text))
-            {
-                ;
-            }
-            else
-            {
-                textBox2.Text = "";
-            }
-            HideCaret(textBox2.Handle);
+
         }
 
-        private void textBox1_Enter(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            HideCaret(textBox1.Handle);
-        }
-
-  
-
-        private void Form1_Shown(object sender, EventArgs e)
-        {
-            HideCaret(textBox2.Handle);
-            HideCaret(textBox1.Handle);
-        }
-
-        private void textBox2_Enter(object sender, EventArgs e)
-        {
-            HideCaret(textBox2.Handle);
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
+            this.Close();
         }
     }
 }

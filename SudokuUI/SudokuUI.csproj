@@ -63,13 +63,15 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Presenters\SudokuPresenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Puzzle.cs" />
-    <Compile Include="PuzzleContext.cs" />
+    <Compile Include="Models\Puzzle.cs" />
+    <Compile Include="Models\PuzzleContext.cs" />
     <Compile Include="SudokuTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Views\IPuzzle.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -98,5 +100,6 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
