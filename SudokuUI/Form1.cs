@@ -51,6 +51,8 @@ namespace SudokuUI
             }
         }
 
+        [DllImport("user32.dll")]
+        static extern bool HideCaret(IntPtr hWnd);
         private void textBoxProperty(object sender, EventArgs e)
         {
             Regex regularExpression = new Regex(@"^[0-9]$");
@@ -62,19 +64,7 @@ namespace SudokuUI
             HideCaret(((TextBox)sender).Handle);
         }
 
-        [DllImport("user32.dll")]
-        static extern bool HideCaret(IntPtr hWnd);
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            Regex regularExpression = new Regex(@"^[0-9]$");
-            if (!regularExpression.IsMatch(textBox00.Text))
-            {
-                ((TextBox)sender).Text = string.Empty;
-            }
-
-            HideCaret(textBox00.Handle);
-        }
-
+       
         private void frmMain_Shown(object sender, EventArgs e)
         {
 
