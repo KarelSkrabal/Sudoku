@@ -29,6 +29,7 @@ namespace SudokuUI.Migrations
             defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 0, col = 5, value = 8 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 0, col = 6, value = 4 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 0, col = 7, value = 0 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 0, col = 8, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 1, col = 0, value = 5 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 1, col = 1, value = 2 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 1, col = 2, value = 0 });
@@ -37,6 +38,7 @@ namespace SudokuUI.Migrations
             defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 1, col = 5, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 1, col = 6, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 1, col = 7, value = 0 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 1, col = 8, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 2, col = 0, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 2, col = 1, value = 8 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 2, col = 2, value = 7 });
@@ -45,6 +47,7 @@ namespace SudokuUI.Migrations
             defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 2, col = 5, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 2, col = 6, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 2, col = 7, value = 3 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 2, col = 8, value = 1 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 3, col = 0, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 3, col = 1, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 3, col = 2, value = 3 });
@@ -53,6 +56,7 @@ namespace SudokuUI.Migrations
             defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 3, col = 5, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 3, col = 6, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 3, col = 7, value = 8 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 3, col = 8, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 4, col = 0, value = 9 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 4, col = 1, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 4, col = 2, value = 0 });
@@ -61,6 +65,7 @@ namespace SudokuUI.Migrations
             defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 4, col = 5, value = 3 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 4, col = 6, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 4, col = 7, value = 0 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 4, col = 8, value = 5 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 5, col = 0, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 5, col = 1, value = 5 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 5, col = 2, value = 0 });
@@ -69,6 +74,7 @@ namespace SudokuUI.Migrations
             defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 5, col = 5, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 5, col = 6, value = 6 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 5, col = 7, value = 0 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 5, col = 8, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 6, col = 0, value = 1 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 6, col = 1, value = 3 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 6, col = 2, value = 0 });
@@ -77,6 +83,7 @@ namespace SudokuUI.Migrations
             defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 6, col = 5, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 6, col = 6, value = 2 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 6, col = 7, value = 5 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 6, col = 8, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 7, col = 0, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 7, col = 1, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 7, col = 2, value = 0 });
@@ -85,6 +92,16 @@ namespace SudokuUI.Migrations
             defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 7, col = 5, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 7, col = 6, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 7, col = 7, value = 7 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 7, col = 8, value = 4 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 8, col = 0, value = 0 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 8, col = 1, value = 0 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 8, col = 2, value = 5 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 8, col = 3, value = 2 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 8, col = 4, value = 0 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 8, col = 5, value = 6 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 8, col = 6, value = 3 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 8, col = 7, value = 0 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 0, row = 8, col = 8, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 0, col = 0, value = 2 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 0, col = 1, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 0, col = 2, value = 0 });
@@ -93,6 +110,7 @@ namespace SudokuUI.Migrations
             defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 0, col = 5, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 0, col = 6, value = 3 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 0, col = 7, value = 0 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 0, col = 8, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 1, col = 0, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 1, col = 1, value = 6 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 1, col = 2, value = 0 });
@@ -101,6 +119,7 @@ namespace SudokuUI.Migrations
             defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 1, col = 5, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 1, col = 6, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 1, col = 7, value = 8 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 1, col = 8, value = 4 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 2, col = 0, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 2, col = 1, value = 3 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 2, col = 2, value = 0 });
@@ -109,6 +128,7 @@ namespace SudokuUI.Migrations
             defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 2, col = 5, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 2, col = 6, value = 2 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 2, col = 7, value = 0 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 2, col = 8, value = 9 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 3, col = 0, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 3, col = 1, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 3, col = 2, value = 0 });
@@ -117,6 +137,7 @@ namespace SudokuUI.Migrations
             defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 3, col = 5, value = 5 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 3, col = 6, value = 4 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 3, col = 7, value = 0 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 3, col = 8, value = 8 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 4, col = 0, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 4, col = 1, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 4, col = 2, value = 0 });
@@ -125,6 +146,7 @@ namespace SudokuUI.Migrations
             defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 4, col = 5, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 4, col = 6, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 4, col = 7, value = 0 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 4, col = 8, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 5, col = 0, value = 4 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 5, col = 1, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 5, col = 2, value = 2 });
@@ -133,6 +155,7 @@ namespace SudokuUI.Migrations
             defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 5, col = 5, value = 6 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 5, col = 6, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 5, col = 7, value = 0 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 5, col = 8, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 6, col = 0, value = 3 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 6, col = 1, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 6, col = 2, value = 1 });
@@ -141,6 +164,7 @@ namespace SudokuUI.Migrations
             defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 6, col = 5, value = 7 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 6, col = 6, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 6, col = 7, value = 4 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 6, col = 8, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 7, col = 0, value = 7 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 7, col = 1, value = 2 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 7, col = 2, value = 0 });
@@ -149,6 +173,16 @@ namespace SudokuUI.Migrations
             defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 7, col = 5, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 7, col = 6, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 7, col = 7, value = 6 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 7, col = 8, value = 0 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 8, col = 0, value = 0 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 8, col = 1, value = 0 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 8, col = 2, value = 4 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 8, col = 3, value = 0 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 8, col = 4, value = 1 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 8, col = 5, value = 0 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 8, col = 6, value = 0 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 8, col = 7, value = 0 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 1, row = 8, col = 8, value = 3 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 0, col = 0, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 0, col = 1, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 0, col = 2, value = 0 });
@@ -157,6 +191,7 @@ namespace SudokuUI.Migrations
             defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 0, col = 5, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 0, col = 6, value = 9 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 0, col = 7, value = 0 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 0, col = 8, value = 7 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 1, col = 0, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 1, col = 1, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 1, col = 2, value = 0 });
@@ -165,6 +200,7 @@ namespace SudokuUI.Migrations
             defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 1, col = 5, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 1, col = 6, value = 1 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 1, col = 7, value = 8 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 1, col = 8, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 2, col = 0, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 2, col = 1, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 2, col = 2, value = 0 });
@@ -173,6 +209,7 @@ namespace SudokuUI.Migrations
             defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 2, col = 5, value = 5 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 2, col = 6, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 2, col = 7, value = 2 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 2, col = 8, value = 6 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 3, col = 0, value = 1 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 3, col = 1, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 3, col = 2, value = 0 });
@@ -181,6 +218,7 @@ namespace SudokuUI.Migrations
             defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 3, col = 5, value = 4 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 3, col = 6, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 3, col = 7, value = 0 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 3, col = 8, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 4, col = 0, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 4, col = 1, value = 5 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 4, col = 2, value = 0 });
@@ -189,6 +227,7 @@ namespace SudokuUI.Migrations
             defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 4, col = 5, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 4, col = 6, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 4, col = 7, value = 4 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 4, col = 8, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 5, col = 0, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 5, col = 1, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 5, col = 2, value = 0 });
@@ -197,6 +236,7 @@ namespace SudokuUI.Migrations
             defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 5, col = 5, value = 7 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 5, col = 6, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 5, col = 7, value = 0 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 5, col = 8, value = 9 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 6, col = 0, value = 9 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 6, col = 1, value = 2 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 6, col = 2, value = 0 });
@@ -205,6 +245,7 @@ namespace SudokuUI.Migrations
             defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 6, col = 5, value = 8 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 6, col = 6, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 6, col = 7, value = 0 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 6, col = 8, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 7, col = 0, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 7, col = 1, value = 3 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 7, col = 2, value = 4 });
@@ -213,6 +254,16 @@ namespace SudokuUI.Migrations
             defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 7, col = 5, value = 9 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 7, col = 6, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 7, col = 7, value = 0 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 7, col = 8, value = 0 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 8, col = 0, value = 5 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 8, col = 1, value = 0 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 8, col = 2, value = 7 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 8, col = 3, value = 0 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 8, col = 4, value = 0 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 8, col = 5, value = 0 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 8, col = 6, value = 0 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 8, col = 7, value = 0 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 2, row = 8, col = 8, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 0, col = 0, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 0, col = 1, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 0, col = 2, value = 3 });
@@ -221,6 +272,7 @@ namespace SudokuUI.Migrations
             defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 0, col = 5, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 0, col = 6, value = 6 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 0, col = 7, value = 0 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 0, col = 8, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 1, col = 0, value = 9 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 1, col = 1, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 1, col = 2, value = 0 });
@@ -229,6 +281,7 @@ namespace SudokuUI.Migrations
             defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 1, col = 5, value = 5 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 1, col = 6, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 1, col = 7, value = 0 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 1, col = 8, value = 1 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 2, col = 0, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 2, col = 1, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 2, col = 2, value = 1 });
@@ -237,6 +290,7 @@ namespace SudokuUI.Migrations
             defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 2, col = 5, value = 6 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 2, col = 6, value = 4 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 2, col = 7, value = 0 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 2, col = 8, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 3, col = 0, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 3, col = 1, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 3, col = 2, value = 8 });
@@ -245,6 +299,7 @@ namespace SudokuUI.Migrations
             defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 3, col = 5, value = 2 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 3, col = 6, value = 9 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 3, col = 7, value = 0 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 3, col = 8, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 4, col = 0, value = 7 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 4, col = 1, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 4, col = 2, value = 0 });
@@ -253,6 +308,7 @@ namespace SudokuUI.Migrations
             defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 4, col = 5, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 4, col = 6, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 4, col = 7, value = 0 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 4, col = 8, value = 8 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 5, col = 0, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 5, col = 1, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 5, col = 2, value = 6 });
@@ -261,6 +317,7 @@ namespace SudokuUI.Migrations
             defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 5, col = 5, value = 8 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 5, col = 6, value = 2 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 5, col = 7, value = 0 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 5, col = 8, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 6, col = 0, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 6, col = 1, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 6, col = 2, value = 2 });
@@ -269,6 +326,7 @@ namespace SudokuUI.Migrations
             defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 6, col = 5, value = 9 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 6, col = 6, value = 5 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 6, col = 7, value = 0 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 6, col = 8, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 7, col = 0, value = 8 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 7, col = 1, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 7, col = 2, value = 0 });
@@ -277,6 +335,16 @@ namespace SudokuUI.Migrations
             defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 7, col = 5, value = 3 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 7, col = 6, value = 0 });
             defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 7, col = 7, value = 0 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 7, col = 8, value = 9 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 8, col = 0, value = 0 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 8, col = 1, value = 0 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 8, col = 2, value = 5 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 8, col = 3, value = 0 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 8, col = 4, value = 1 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 8, col = 5, value = 0 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 8, col = 6, value = 3 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 8, col = 7, value = 0 });
+            defaultPuzzles.Add(new Puzzle { puzzleId = 3, row = 8, col = 8, value = 0 });
 
             context.PuzzleCells.AddRange(defaultPuzzles);
             base.Seed(context);

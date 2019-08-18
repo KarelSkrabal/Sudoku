@@ -61,9 +61,9 @@ namespace SudokuCLI
 
             foreach(var input in inputs)
             {
-                for (int r = 0; r < 8; r++)
+                for (int r = 0; r < 9; r++)
                 {
-                    for (int c = 0; c < 8; c++)
+                    for (int c = 0; c < 9; c++)
                     {
                         Console.WriteLine("defaultPuzzles.Add(new Puzzle {{ puzzleId = {0}, row = {1}, col = {2}, value = {3} }});", input.Key, r, c, input.Value[r, c]);
                     }

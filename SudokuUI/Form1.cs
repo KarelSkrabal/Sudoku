@@ -66,5 +66,10 @@ namespace SudokuUI
         {
             HideCaret(textBox2.Handle);
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
