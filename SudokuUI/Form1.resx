@@ -117,10 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Target" xml:space="preserve">
-    <value>H4sIAAAAAAAEAM1XyY7cNhC9B8g/CDyPm7NckoFkY9I9EzSSWWCNfWdL1W3CFKmI5GTav+ZDPim/kKJ2Ub3bMIK+tEpVrxbWq6L+/fpP+O41E8ELFJorGZGLyTkJQCYq5XIVEWuWb34h797+/FN4m2avwcdG78rpoaXUEflkTH5NqU4+Qcb0JONJobRamkmiMspSRS/Pz3+lFxcUEIIgVhCE7600PIPyAR+nSiaQG8vEvUpB6FqOb+ISNXhgGeicJRCR2Kbqs/0wJ8GN4Az9xyCWJGBSKsMMRnf9QUNsCiVXcY4CJp7XOaDekgkNddTXnfqhCZxfugRoZ9hAJVYblR0JeHFVV4T65ifVlbQVw5rdYm3N2mVd1i0iT/bLF4Gp+66up6Jwal1RJ5XqWdAIztozx9Zwv7NgaoWxBUQSrCmYOAue7ELw5A9YP6vPICNphejHgxHhu4EARU+FyqEw6/ewrKPkMxLQoR31DVuznk2VwVyaq0sSPKBzthDQHncv29ioAn4HCQUzkD4xY6DA05qnUBZs5N3zlZelmaf7PO5GKdTf3waQKPFtAC9MWDgGIqRdR437DLlrGMeiDprNSeHVbOg5ZGfddtjjpsBQhtFWqDGYIR4IoUnQBVLxftK09qZ428i6cUKredLMHbpl8IT3LM9xAvYGUS0J4moKTd/ExxM1qzBoojfwtY229YTtylbgvUXXGOkdL7SZMcMWzJ3WNM1GasNz2FLjxte41D5fu8o3Nu5/ZedND9+2q94dJpQh28rcoI2inVAjw3IDMMGKDbyfKmEzuW127LLumNzH6KSHI5Vs7oOUgsPtSzL37UvB4fY1l/sItWiMEVLvFPwjpqMz9qax3za7OOertN5b7nkcC+t+338DGBGgUiEBFueFp67547U2kE2cwiT+S0wFx3w7hXsm+RK0qRYWwXV86V0n/j+rnWqdioP2+w/fudzVdO9WPXI9+Wu2dHL6kj3FvLdiTzEfLNj9AMet1/H0P2R97ticFXkiki4UxlxFWb3TJ6/VMZVD2r/yhzPQfNVBuA8ACYnjSAfa6MzlUjUVxrz6ETUq3gHcg2EpluemMHzJEoOvE9Aahw0JPrrDichttoB0Lh+tya250RqyhRjcAEO62395dxjGHD7m7kl/jxQwTI4pwKP8zXKRtnHfbeifLRCuU2peYlT4RYRwq3WL9KDkgUB1+WaQg3SsfoYsFwimH2XMXuCU2PAS+CesWLJuJvJ2kP0HMSx7OONsVbBM1xidvfuMpe479u1/eikXCPkOAAA=</value>
-  </data>
-  <data name="DefaultSchema" xml:space="preserve">
-    <value>dbo</value>
-  </data>
+  <metadata name="metroStyleExtender1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>285, 17</value>
+  </metadata>
 </root>

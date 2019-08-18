@@ -24,6 +24,7 @@ namespace SudokuCLI
             //    {0, 0, 5, 2, 0, 6, 3, 0, 0}
             //};
 
+
             //    int[,] board = new int[,]
             //{
             //    {0,0,3,0,2,0,6,0,0},
@@ -50,7 +51,7 @@ namespace SudokuCLI
             //    {7,2,0,0,4,0,0,6,0},
             //    {0,0,4,0,1,0,0,0,3},
             //};
-            
+
             Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
 
@@ -66,6 +67,9 @@ namespace SudokuCLI
                 {0,3,4,0,5,9,0,0,0},
                 {5,0,7,0,0,0,0,0,0},
             };
+
+            InputParser.Generate();
+
             sudoku.SolveSudoku(board);
             sudoku.printBoard(board);
             stopWatch.Stop();
