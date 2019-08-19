@@ -13,6 +13,7 @@ namespace SudokuUI.Views
         List<int> puzzleIds { set; }
         int selectedIndex { get; }
         int[,] cellValues { get; }
+        string processTime { get; set; }
 
         event EventHandler<EventArgs> Clear;
         event EventHandler<EventArgs> Show;

@@ -25,11 +25,6 @@ namespace SudokuUI.Presenters
             Initialize();
         }
 
-        public SudokuPresenter()
-        {
-
-        }
-
         private void Initialize()
         {
             puzzleView.Clear += Clear;

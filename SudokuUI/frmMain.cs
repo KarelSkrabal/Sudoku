@@ -23,7 +23,8 @@ namespace SudokuUI
         Dictionary<Tuple<int, int>, TextBox> IView.board { get => board; set => board = value; }
         public List<int> puzzleIds { set => cbGames.DataSource = value; }
         public int selectedIndex { get => cbGames.SelectedIndex; }
-        public int[,] cellValues { get => GetBoardFromForm(); }
+        public int[,] cellValues { get => GetValuesFromForm(); }
+        public string processTime { get => lbProcessTime.Text; set => lbProcessTime.Text = value; }
 
         public event EventHandler<EventArgs> Clear;
         public event EventHandler<EventArgs> Show;
@@ -68,7 +69,7 @@ namespace SudokuUI
             }
         }
 
-        private int[,] GetBoardFromForm()
+        private int[,] GetValuesFromForm()
         {
             int[,] boardValues = new int[9,9];
             for (int r = 0; r < 9; r++)
