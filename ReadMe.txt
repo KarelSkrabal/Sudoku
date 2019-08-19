@@ -93,3 +93,22 @@ savePuzzle       ... saving data to database int [,], return void
 
 
 
+Links
+------
+https://www.dreamincode.net/forums/topic/342849-introducing-mvp-model-view-presenter-pattern-winforms/   (main source)
+https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/events/how-to-implement-interface-events  (interface & events)
+https://www.dreamincode.net/forums/blog/2165/entry-5025-mvc-and-c%23-winforms-mismatch/  (mvc)
+https://stackoverflow.com/questions/2056/what-are-mvp-and-mvc-and-what-is-the-difference  (general description on stackoverflow)
+http://www.ii.uni.wroc.pl/~wzychla/mvc.html   (mvc)
+https://www.codeproject.com/Articles/2353/Model-View-Controller-MVC-Using-C-Delegates-and-Ev  (mvc)
+https://www.codeproject.com/Articles/613682/Your-first-program-using-MVC-pattern-with-Csharp-W  (mvc)
+
+https://www.youtube.com/watch?v=UgnbIJYUTQY  (very simple video, some tight coupling)
+https://www.codeproject.com/Articles/613682/Your-first-program-using-MVC-pattern-with-Csharp-W  (project downloaded D:\Programming\MVC\Winform_MVCTest_Source\MVCTest\MVCTest1\)
+https://www.codeproject.com/Articles/383153/The-Model-View-Controller-MVC-Pattern-with-Csharp
+
+some others ..
+https://www.c-sharpcorner.com/uploadfile/83e6a1/model-view-control-mvc-pattern-using-C-Sharp-real-life-example/
+https://www.c-sharpcorner.com/article/introduction-to-model-view-control-mvc-pattern-using-C-Sharp/
+
+

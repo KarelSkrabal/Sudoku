@@ -109,15 +109,15 @@
             this.textBox82 = new System.Windows.Forms.TextBox();
             this.textBox85 = new System.Windows.Forms.TextBox();
             this.textBox88 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnSolve = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnNew = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.lbProcessTime = new System.Windows.Forms.Label();
+            this.cbGames = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox00
@@ -1011,68 +1011,71 @@
             this.textBox88.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox88.WordWrap = false;
             // 
-            // button1
+            // btnCancel
             // 
-            this.button1.Location = new System.Drawing.Point(361, 484);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(60, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Cancel";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCancel.Location = new System.Drawing.Point(361, 484);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(60, 23);
+            this.btnCancel.TabIndex = 1;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // button2
+            // btnSolve
             // 
-            this.button2.Location = new System.Drawing.Point(295, 484);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(60, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Solve";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnSolve.Location = new System.Drawing.Point(295, 484);
+            this.btnSolve.Name = "btnSolve";
+            this.btnSolve.Size = new System.Drawing.Size(60, 23);
+            this.btnSolve.TabIndex = 1;
+            this.btnSolve.Text = "Solve";
+            this.btnSolve.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnSave
             // 
-            this.button3.Location = new System.Drawing.Point(229, 484);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(60, 23);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Save";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnSave.Location = new System.Drawing.Point(229, 484);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(60, 23);
+            this.btnSave.TabIndex = 1;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnNew
             // 
-            this.button4.Location = new System.Drawing.Point(163, 484);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(60, 23);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "New";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnNew.Location = new System.Drawing.Point(163, 484);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(60, 23);
+            this.btnNew.TabIndex = 1;
+            this.btnNew.Text = "New";
+            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 465);
+            this.label1.Location = new System.Drawing.Point(8, 461);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(80, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Process Time : ";
             // 
-            // label2
+            // lbProcessTime
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(82, 465);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "xxxxxxx";
+            this.lbProcessTime.AutoSize = true;
+            this.lbProcessTime.Location = new System.Drawing.Point(82, 461);
+            this.lbProcessTime.Name = "lbProcessTime";
+            this.lbProcessTime.Size = new System.Drawing.Size(42, 13);
+            this.lbProcessTime.TabIndex = 3;
+            this.lbProcessTime.Text = "xxxxxxx";
             // 
-            // comboBox1
+            // cbGames
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(46, 485);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(47, 21);
-            this.comboBox1.TabIndex = 4;
+            this.cbGames.FormattingEnabled = true;
+            this.cbGames.Location = new System.Drawing.Point(46, 485);
+            this.cbGames.Name = "cbGames";
+            this.cbGames.Size = new System.Drawing.Size(47, 21);
+            this.cbGames.TabIndex = 4;
+            this.cbGames.SelectedIndexChanged += new System.EventHandler(this.cbGames_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -1083,29 +1086,31 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Game";
             // 
-            // button5
+            // btnClear
             // 
-            this.button5.Location = new System.Drawing.Point(361, 455);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(60, 23);
-            this.button5.TabIndex = 1;
-            this.button5.Text = "Clear";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnClear.Location = new System.Drawing.Point(361, 455);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(60, 23);
+            this.btnClear.TabIndex = 1;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(431, 516);
+            this.CancelButton = this.btnCancel;
+            this.ClientSize = new System.Drawing.Size(425, 513);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.cbGames);
+            this.Controls.Add(this.lbProcessTime);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnNew);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnSolve);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.textBox88);
             this.Controls.Add(this.textBox58);
             this.Controls.Add(this.textBox85);
@@ -1187,9 +1192,12 @@
             this.Controls.Add(this.textBox30);
             this.Controls.Add(this.textBox01);
             this.Controls.Add(this.textBox00);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.Name = "frmMain";
             this.Text = "Sudoku Solver";
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.Shown += new System.EventHandler(this.frmMain_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1278,15 +1286,15 @@
         private System.Windows.Forms.TextBox textBox82;
         private System.Windows.Forms.TextBox textBox85;
         private System.Windows.Forms.TextBox textBox88;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnSolve;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label lbProcessTime;
+        private System.Windows.Forms.ComboBox cbGames;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnClear;
     }
 }
 
