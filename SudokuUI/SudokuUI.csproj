@@ -100,6 +100,11 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary2\Sudoku.csproj">
+      <Project>{4C0D1FEA-3344-4977-9334-D5D8E13EE2E2}</Project>
+      <Name>Sudoku</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

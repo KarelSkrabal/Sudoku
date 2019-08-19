@@ -1030,6 +1030,7 @@
             this.btnSolve.TabIndex = 1;
             this.btnSolve.Text = "Solve";
             this.btnSolve.UseVisualStyleBackColor = true;
+            this.btnSolve.Click += new System.EventHandler(this.btnSolve_Click);
             // 
             // btnSave
             // 

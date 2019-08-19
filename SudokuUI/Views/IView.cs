@@ -9,13 +9,14 @@ namespace SudokuUI.Views
 {
     public interface IView
     {
+        Dictionary<Tuple<int, int>, TextBox> board { get; set; }
         List<int> puzzleIds { set; }
         int selectedIndex { get; }
+        int[,] cellValues { get; }
 
         event EventHandler<EventArgs> Clear;
         event EventHandler<EventArgs> Show;
         event EventHandler<EventArgs> LoadData;
-
-        Dictionary<Tuple<int, int>, TextBox> board { get; set; }
+        event EventHandler<EventArgs> Solve;        
     }
 }

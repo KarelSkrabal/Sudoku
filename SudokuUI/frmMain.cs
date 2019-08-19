@@ -1,4 +1,5 @@
-﻿using SudokuUI.Presenters;
+﻿using SudokuSolver;
+using SudokuUI.Presenters;
 using SudokuUI.Views;
 using System;
 using System.Collections.Generic;
@@ -22,10 +23,12 @@ namespace SudokuUI
         Dictionary<Tuple<int, int>, TextBox> IView.board { get => board; set => board = value; }
         public List<int> puzzleIds { set => cbGames.DataSource = value; }
         public int selectedIndex { get => cbGames.SelectedIndex; }
+        public int[,] cellValues { get => GetBoardFromForm(); }
 
         public event EventHandler<EventArgs> Clear;
         public event EventHandler<EventArgs> Show;
         public event EventHandler<EventArgs> LoadData;
+        public event EventHandler<EventArgs> Solve;
 
         public frmMain()
         {
@@ -35,8 +38,6 @@ namespace SudokuUI
 
             commonTextBoxProperties();
         }
-
-
 
         private void initBoard()
         {
@@ -65,6 +66,20 @@ namespace SudokuUI
                 cell.Value.TextChanged += new EventHandler(textBoxProperty);
                 cell.Value.Enter += new EventHandler(textBoxProperty);
             }
+        }
+
+        private int[,] GetBoardFromForm()
+        {
+            int[,] boardValues = new int[9,9];
+            for (int r = 0; r < 9; r++)
+            {
+                for (int c = 0; c < 9; c++)
+                {
+                    TextBox tbx = this.Controls.Find("textBox" + Convert.ToString(r) + Convert.ToString(c), true).FirstOrDefault() as TextBox;
+                    boardValues[r, c] = Convert.ToInt16( tbx.Text);
+                }
+            }
+            return boardValues;
         }
 
         [DllImport("user32.dll")]
@@ -98,7 +113,7 @@ namespace SudokuUI
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            presenter = new SudokuPresenter(this);
+            presenter = new SudokuPresenter(this, new Sudoku());
         }
 
         private void btnNew_Click(object sender, EventArgs e)
@@ -109,6 +124,11 @@ namespace SudokuUI
         private void cbGames_SelectedIndexChanged(object sender, EventArgs e)
         {        
             LoadData(this, EventArgs.Empty);
+        }
+
+        private void btnSolve_Click(object sender, EventArgs e)
+        {
+            Solve(this, EventArgs.Empty);
         }
     }
 }

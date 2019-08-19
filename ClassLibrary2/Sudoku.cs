@@ -40,10 +40,15 @@ namespace SudokuSolver
         i*delka,i*delka+2
                 
      */
+
+    public interface ISudoku
+    {
+        bool SolveSudoku(int[,] board);
+    }
     public enum BOARD_ITEM { row, col}
     
 
-    public class Sudoku
+    public class Sudoku : ISudoku
     {
         public readonly int boardSize = 9;
         private readonly int[] allValues = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
