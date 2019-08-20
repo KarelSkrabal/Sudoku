@@ -16,7 +16,14 @@ namespace SudokuUI
 
         Dictionary<Tuple<int, int>, TextBox> board = new Dictionary<Tuple<int, int>, TextBox>();
         Dictionary<Tuple<int, int>, TextBox> IView.board { get => board; set => board = value; }
-        public List<int> puzzleIds { set => cbGames.DataSource = value; }
+        public List<int> puzzleIds { get => puzzleIds;
+            set
+            {
+                cbGames.DataSource = null;
+                cbGames.DataSource = value;
+                cbGames.Refresh();
+            }
+        }
         public int selectedIndex { get => cbGames.SelectedIndex; }
         public int[,] cellValues { get => GetValuesFromForm(); }
         public string processTime { get => lbProcessTime.Text; set => lbProcessTime.Text = value; }
@@ -26,13 +33,12 @@ namespace SudokuUI
         public event EventHandler<EventArgs> Show;
         public event EventHandler<EventArgs> LoadData;
         public event EventHandler<EventArgs> Solve;
+        public event EventHandler<EventArgs> Save;
 
         public frmMain()
         {
             InitializeComponent();
-
             initBoard();
-
             commonTextBoxProperties();
         }
 
@@ -88,9 +94,8 @@ namespace SudokuUI
             {
                 ((TextBox)sender).Text = string.Empty;
             }
-
+            isDirty = true;
             HideCaret(((TextBox)sender).Handle);
-            //isDirty = true;
         }
 
 
@@ -117,7 +122,8 @@ namespace SudokuUI
         {
             isDirty = false;
             presenter = new SudokuPresenter(this, new Sudoku());
-            cbGames.SelectedIndex = -1;            
+            cbGames.SelectedIndex = -1;
+            this.ActiveControl = btnCancel;
         }
 
         private void btnNew_Click(object sender, EventArgs e)
@@ -134,10 +140,10 @@ namespace SudokuUI
 
         private void cbGames_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(!isDirty)
-            {
-                cbGames.SelectedIndex = -1;
-            }
+            //if (!isDirty)
+            //{
+            //    cbGames.SelectedIndex = -1;
+            //}
             isDirty = true;
             LoadData(this, EventArgs.Empty);
         }
@@ -155,5 +161,14 @@ namespace SudokuUI
             return MessageBox.Show("Abandon current editing?", "Abandon", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
         }
 
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (isDirty)
+            {
+                //puzzleIds.Clear();
+
+                Save(this, EventArgs.Empty);
+            }
+        }
     }
 }

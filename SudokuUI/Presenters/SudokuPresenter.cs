@@ -26,6 +26,7 @@ namespace SudokuUI.Presenters
             puzzleView.Show += Show;
             puzzleView.LoadData += Load;
             puzzleView.Solve += Solve;
+            puzzleView.Save += Save;
         }
 
         private void Clear(object sender, EventArgs e)
@@ -55,9 +56,9 @@ namespace SudokuUI.Presenters
 
         private List<Puzzle> GetById(int id)
         {
-            using (var puzzle = new PuzzleContext())
+            using (var db = new PuzzleContext())
             {
-                return puzzle.PuzzleCells.Where(p => p.puzzleId == id).ToList();
+                return db.PuzzleCells.Where(p => p.puzzleId == id).ToList();
             }
         }
 
@@ -74,6 +75,34 @@ namespace SudokuUI.Presenters
                     Tuple<int, int> key = new Tuple<int, int>(r, c);
                     puzzleView.board[key].Text = values[r, c].ToString();
                 }
+            }
+        }
+
+        private void Save(object sender, EventArgs e)
+        {
+            int lastPuzzleId = GetLastPuzzleId();
+            int newPuzzleId = ++lastPuzzleId;
+            using (var db = new PuzzleContext())
+            {
+                List<Puzzle> cells = new List<Puzzle>();
+                for (int r = 0; r < 9; r++)
+                {
+                    for (int c = 0; c < 9; c++)
+                    {
+                        cells.Add(new Puzzle() { row = r, col = c, puzzleId = newPuzzleId, value = puzzleView.cellValues[r, c] });
+                    }
+                }
+                db.PuzzleCells.AddRange(cells);
+                db.SaveChanges();
+                puzzleView.puzzleIds = db.PuzzleCells.Select(p => p.puzzleId).Distinct().ToList<int>();
+            }            
+        }
+
+        private int GetLastPuzzleId()
+        {
+            using (var db = new PuzzleContext())
+            {
+                return db.PuzzleCells.OrderByDescending(p => p.puzzleId).FirstOrDefault().puzzleId;
             }
         }
     }

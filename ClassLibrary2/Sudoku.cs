@@ -187,7 +187,6 @@ namespace SudokuSolver
             }
             return true;
         }
-
         public IEnumerable<int> PossibleColValues(int[,] board, int rowTested, int colTested)
         {
             int[] actualRow = new int[boardSize];
@@ -220,7 +219,6 @@ namespace SudokuSolver
 
             return ret;
         }      
-
         public void printBoard(int[,] board)
         {
             for (int r = 0; r < boardSize; r++)

@@ -19,6 +19,7 @@ namespace SudokuUI.Views
         event EventHandler<EventArgs> Clear;
         event EventHandler<EventArgs> Show;
         event EventHandler<EventArgs> LoadData;
-        event EventHandler<EventArgs> Solve;        
+        event EventHandler<EventArgs> Solve;
+        event EventHandler<EventArgs> Save;
     }
 }

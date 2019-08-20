@@ -1016,7 +1016,7 @@
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.Location = new System.Drawing.Point(481, 596);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(80, 28);
             this.btnCancel.TabIndex = 1;
@@ -1027,7 +1027,7 @@
             // btnSolve
             // 
             this.btnSolve.Location = new System.Drawing.Point(393, 596);
-            this.btnSolve.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSolve.Margin = new System.Windows.Forms.Padding(4);
             this.btnSolve.Name = "btnSolve";
             this.btnSolve.Size = new System.Drawing.Size(80, 28);
             this.btnSolve.TabIndex = 1;
@@ -1038,17 +1038,18 @@
             // btnSave
             // 
             this.btnSave.Location = new System.Drawing.Point(305, 596);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(80, 28);
             this.btnSave.TabIndex = 1;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnNew
             // 
             this.btnNew.Location = new System.Drawing.Point(217, 596);
-            this.btnNew.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNew.Margin = new System.Windows.Forms.Padding(4);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(80, 28);
             this.btnNew.TabIndex = 1;
@@ -1080,7 +1081,7 @@
             // 
             this.cbGames.FormattingEnabled = true;
             this.cbGames.Location = new System.Drawing.Point(61, 597);
-            this.cbGames.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbGames.Margin = new System.Windows.Forms.Padding(4);
             this.cbGames.Name = "cbGames";
             this.cbGames.Size = new System.Drawing.Size(61, 24);
             this.cbGames.TabIndex = 4;
@@ -1099,7 +1100,7 @@
             // btnClear
             // 
             this.btnClear.Location = new System.Drawing.Point(481, 560);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(4);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(80, 28);
             this.btnClear.TabIndex = 1;
