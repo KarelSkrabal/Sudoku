@@ -140,10 +140,6 @@ namespace SudokuUI
 
         private void cbGames_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //if (!isDirty)
-            //{
-            //    cbGames.SelectedIndex = -1;
-            //}
             isDirty = true;
             LoadData(this, EventArgs.Empty);
         }
@@ -165,8 +161,6 @@ namespace SudokuUI
         {
             if (isDirty)
             {
-                //puzzleIds.Clear();
-
                 Save(this, EventArgs.Empty);
             }
         }
