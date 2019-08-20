@@ -1,19 +1,14 @@
-﻿using System;
+﻿using SudokuSolver;
+using SudokuUI.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using SudokuSolver;
-using SudokuUI.Views;
 
 
 namespace SudokuUI.Presenters
 {
-    public interface ISudokuGame
-    {
-        List<Puzzle> GetById(int id);
-    }
-    public class SudokuPresenter : ISudokuGame
+    public class SudokuPresenter
     {
         private IView puzzleView;
         private ISudoku sudokuSolver;
@@ -58,25 +53,26 @@ namespace SudokuUI.Presenters
             }
         }
 
-        public List<Puzzle> GetById(int id)
+        private List<Puzzle> GetById(int id)
         {
-            using(var puzzle = new PuzzleContext())
+            using (var puzzle = new PuzzleContext())
             {
                 return puzzle.PuzzleCells.Where(p => p.puzzleId == id).ToList();
             }
         }
 
-        private void Solve(object sender, EventArgs e)
+        private async void Solve(object sender, EventArgs e)
         {
             int[,] values = puzzleView.cellValues;
-            sudokuSolver.SolveSudoku(values);
+
+            await Task.Run(() => sudokuSolver.SolveSudoku(values));
 
             for (int r = 0; r < 9; r++)
             {
                 for (int c = 0; c < 9; c++)
                 {
                     Tuple<int, int> key = new Tuple<int, int>(r, c);
-                    puzzleView.board[key].Text = values[r,c].ToString();
+                    puzzleView.board[key].Text = values[r, c].ToString();
                 }
             }
         }

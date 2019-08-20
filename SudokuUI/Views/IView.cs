@@ -14,6 +14,7 @@ namespace SudokuUI.Views
         int selectedIndex { get; }
         int[,] cellValues { get; }
         string processTime { get; set; }
+        bool isDirty { get; set; }
 
         event EventHandler<EventArgs> Clear;
         event EventHandler<EventArgs> Show;

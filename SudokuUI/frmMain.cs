@@ -3,14 +3,9 @@ using SudokuUI.Presenters;
 using SudokuUI.Views;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SudokuUI
@@ -25,6 +20,7 @@ namespace SudokuUI
         public int selectedIndex { get => cbGames.SelectedIndex; }
         public int[,] cellValues { get => GetValuesFromForm(); }
         public string processTime { get => lbProcessTime.Text; set => lbProcessTime.Text = value; }
+        public bool isDirty { get; set; }
 
         public event EventHandler<EventArgs> Clear;
         public event EventHandler<EventArgs> Show;
@@ -71,13 +67,13 @@ namespace SudokuUI
 
         private int[,] GetValuesFromForm()
         {
-            int[,] boardValues = new int[9,9];
+            int[,] boardValues = new int[9, 9];
             for (int r = 0; r < 9; r++)
             {
                 for (int c = 0; c < 9; c++)
                 {
                     TextBox tbx = this.Controls.Find("textBox" + Convert.ToString(r) + Convert.ToString(c), true).FirstOrDefault() as TextBox;
-                    boardValues[r, c] = Convert.ToInt16( tbx.Text);
+                    boardValues[r, c] = Convert.ToInt16(tbx.Text);
                 }
             }
             return boardValues;
@@ -94,9 +90,10 @@ namespace SudokuUI
             }
 
             HideCaret(((TextBox)sender).Handle);
+            //isDirty = true;
         }
 
-       
+
         private void frmMain_Shown(object sender, EventArgs e)
         {
             Show(this, EventArgs.Empty);
@@ -109,27 +106,54 @@ namespace SudokuUI
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            Clear(this, EventArgs.Empty);
+            if (AbandonEdit() == System.Windows.Forms.DialogResult.Yes)
+            {
+                isDirty = false;
+                Clear(this, EventArgs.Empty);
+            }
         }
 
         private void frmMain_Load(object sender, EventArgs e)
         {
+            isDirty = false;
             presenter = new SudokuPresenter(this, new Sudoku());
+            cbGames.SelectedIndex = -1;            
         }
 
         private void btnNew_Click(object sender, EventArgs e)
         {
-            Clear(this, EventArgs.Empty);
+            if (isDirty)
+            {
+                if (AbandonEdit() == System.Windows.Forms.DialogResult.Yes)
+                {
+                    isDirty = false;
+                    Clear(this, EventArgs.Empty);
+                }
+            }
         }
 
         private void cbGames_SelectedIndexChanged(object sender, EventArgs e)
-        {        
+        {
+            if(!isDirty)
+            {
+                cbGames.SelectedIndex = -1;
+            }
+            isDirty = true;
             LoadData(this, EventArgs.Empty);
         }
 
         private void btnSolve_Click(object sender, EventArgs e)
         {
-            Solve(this, EventArgs.Empty);
+            if (isDirty)
+            {
+                Solve(this, EventArgs.Empty);
+            }
         }
+
+        private DialogResult AbandonEdit()
+        {
+            return MessageBox.Show("Abandon current editing?", "Abandon", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+        }
+
     }
 }
