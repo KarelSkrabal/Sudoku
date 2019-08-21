@@ -4,47 +4,6 @@ using System.Linq;
 
 namespace SudokuSolver
 {
-    //https://www.geeksforgeeks.org/sudoku-backtracking-7/
-    //https://hackernoon.com/sudoku-and-backtracking-6613d33229af
-    //https://qqwing.com/download.html
-    //http://www.sudokuessentials.com/easy_sudoku.html
-    /*
-     * Math.Truncate(num);
-        r > 0 && r < 3		r > 0 && r < 3		r > 0 && r < 3
-        c > 0 && c < 3		c > 2 && c < 6		c > 5 && c < 9
-
-        r > 2 && r < 6		r > 2 && r < 6		r > 2 && r < 6
-        c > 0 && c < 3		c > 2 && c < 6		c > 5 && c < 9
-
-        r > 5 && r < 9		r > 5 && r < 9		r > 5 && r < 9
-        c > 0 && c < 3		c > 2 && c < 6		c > 5 && c < 9
-
-        r >= 0 && r <= 2		r >= 0 && r <= 2    r >= 0 && r <= 2
-        c >= 0 && c <= 2		c >= 3 && c <= 5	c >= 6 && c <= 8
-
-        r >= 3 && r <= 5		r >= 3 && r <= 5	r >= 3 && r <= 5
-        c >= 0 && c <= 2		c >= 3 && c <= 5	c >= 6 && c <= 8
-
-        r >= 6 && r <= 8		r >= 6 && r <= 8    r >= 6 && r <= 8
-        c >= 0 && c <= 2 		c >= 3 && c <= 5	c >= 6 && c <= 8
-
-        3,6 => 3 / delka = 1 => 1 * delka = 3
-            => 6 / delka = 2 => 2 * delka = 6
-        0,4 => 0 / delka = 0 => 0 * delka = 0
-            => 4 / delka = 1 => 1 * delka = 3
-        5,2 => 5 / delka = 1 5%3=2
-            => 2 / delka = 0
-        4,4
-        7,8
-        i=0,1,2
-        i*delka,i*delka+2
-                
-     */
-
-    public interface ISudoku
-    {
-        bool SolveSudoku(int[,] board);
-    }
     public enum BOARD_ITEM { row, col}
     
 

@@ -2,6 +2,7 @@
 using SudokuUI.Views;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -68,7 +69,11 @@ namespace SudokuUI.Presenters
         {
             int[,] values = puzzleView.cellValues;
 
+            Stopwatch stopWatch = new Stopwatch();
+            stopWatch.Start();
             await Task.Run(() => sudokuSolver.SolveSudoku(values));
+            stopWatch.Stop();
+            puzzleView.processTime = stopWatch.ElapsedMilliseconds.ToString() + " ms";
 
             for (int r = 0; r < 9; r++)
             {

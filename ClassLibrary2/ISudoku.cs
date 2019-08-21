@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SudokuUI.Models
+namespace SudokuSolver
 {
-    public interface IModel
+    public interface ISudoku
     {
-        string processTime { get; }
+        bool SolveSudoku(int[,] board);
     }
 }

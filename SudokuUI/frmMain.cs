@@ -26,7 +26,7 @@ namespace SudokuUI
         }
         public int selectedIndex { get => cbGames.SelectedIndex; }
         public int[,] cellValues { get => GetValuesFromForm(); }
-        public string processTime { get => lbProcessTime.Text; set => lbProcessTime.Text = value; }
+        public string processTime { /*get => lbProcessTime.Text;*/ set => lbProcessTime.Text = value; }
         public bool isDirty { get; set; }
 
         public event EventHandler<EventArgs> Clear;
@@ -115,6 +115,7 @@ namespace SudokuUI
             {
                 isDirty = false;
                 Clear(this, EventArgs.Empty);
+                processTime = string.Empty;
             }
         }
 
@@ -124,6 +125,7 @@ namespace SudokuUI
             presenter = new SudokuPresenter(this, new Sudoku());
             cbGames.SelectedIndex = -1;
             this.ActiveControl = btnCancel;
+            processTime = string.Empty;
         }
 
         private void btnNew_Click(object sender, EventArgs e)
@@ -134,6 +136,7 @@ namespace SudokuUI
                 {
                     isDirty = false;
                     Clear(this, EventArgs.Empty);
+                    processTime = string.Empty;
                 }
             }
         }
@@ -142,6 +145,7 @@ namespace SudokuUI
         {
             isDirty = true;
             LoadData(this, EventArgs.Empty);
+            processTime = string.Empty;
         }
 
         private void btnSolve_Click(object sender, EventArgs e)

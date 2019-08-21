@@ -1072,14 +1072,13 @@
             this.lbProcessTime.Location = new System.Drawing.Point(109, 567);
             this.lbProcessTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbProcessTime.Name = "lbProcessTime";
-            this.lbProcessTime.Size = new System.Drawing.Size(50, 17);
+            this.lbProcessTime.Size = new System.Drawing.Size(0, 17);
             this.lbProcessTime.TabIndex = 3;
-            this.lbProcessTime.Text = "xxxxxxx";
             // 
             // cbGames
             // 
             this.cbGames.FormattingEnabled = true;
-            this.cbGames.Location = new System.Drawing.Point(61, 597);
+            this.cbGames.Location = new System.Drawing.Point(134, 597);
             this.cbGames.Margin = new System.Windows.Forms.Padding(4);
             this.cbGames.Name = "cbGames";
             this.cbGames.Size = new System.Drawing.Size(61, 24);
@@ -1100,12 +1099,12 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 602);
+            this.label3.Location = new System.Drawing.Point(12, 600);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 17);
+            this.label3.Size = new System.Drawing.Size(109, 17);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Game";
+            this.label3.Text = "Saved Games : ";
             // 
             // frmMain
             // 
