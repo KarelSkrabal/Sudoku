@@ -10,7 +10,7 @@ namespace SudokuUI.Views
         List<int> puzzleIds { set; }
         int selectedIndex { get; }
         int[,] cellValues { get; }
-        string processTime { /*get;*/ set; }
+        string processTime { set; }
         bool isDirty { get; set; }
 
         event EventHandler<EventArgs> Clear;

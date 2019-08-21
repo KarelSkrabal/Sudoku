@@ -26,7 +26,7 @@ namespace SudokuUI
         }
         public int selectedIndex { get => cbGames.SelectedIndex; }
         public int[,] cellValues { get => GetValuesFromForm(); }
-        public string processTime { /*get => lbProcessTime.Text;*/ set => lbProcessTime.Text = value; }
+        public string processTime { set => lbProcessTime.Text = value; }
         public bool isDirty { get; set; }
 
         public event EventHandler<EventArgs> Clear;
