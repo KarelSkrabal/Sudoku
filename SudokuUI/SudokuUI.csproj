@@ -62,6 +62,10 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201908211755380_test.cs" />
+    <Compile Include="Migrations\201908211755380_test.Designer.cs">
+      <DependentUpon>201908211755380_test.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Presenters\SudokuPresenter.cs" />
     <Compile Include="Program.cs" />
@@ -74,6 +78,9 @@
     <Compile Include="Views\IView.cs" />
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908211755380_test.resx">
+      <DependentUpon>201908211755380_test.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
