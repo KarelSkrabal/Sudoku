@@ -34,7 +34,7 @@ namespace SudokuUI.Presenters
         {
             foreach (var cell in puzzleView.board)
             {
-                cell.Value.Text = Convert.ToString(0);
+                cell.Value.Text = "0";
             }
         }
 
@@ -42,9 +42,8 @@ namespace SudokuUI.Presenters
         {
             using (var db = new PuzzleContext())
             {
-                List<int> ids = db.PuzzleCells.Select(p => p.puzzleId).Distinct().OrderByDescending(p => p).ToList();
-                ids.Reverse();
-                puzzleView.puzzleIds = ids;                
+                List<int> ids = db.PuzzleCells.Select(p => p.puzzleId).Distinct().OrderBy(p => p).ToList();
+                puzzleView.puzzleIds = ids;
             }
         }
 
@@ -89,6 +88,7 @@ namespace SudokuUI.Presenters
         {
             int lastPuzzleId = GetLastPuzzleId();
             int newPuzzleId = ++lastPuzzleId;
+
             using (var db = new PuzzleContext())
             {
                 List<Puzzle> cells = new List<Puzzle>();
@@ -96,16 +96,24 @@ namespace SudokuUI.Presenters
                 {
                     for (int c = 0; c < 9; c++)
                     {
-                        cells.Add(new Puzzle() { row = r, col = c, puzzleId = newPuzzleId, value = puzzleView.cellValues[r, c] });
+                        cells.Add( new Puzzle() { row = r, col = c, puzzleId = newPuzzleId, value = puzzleView.cellValues[r, c] } );
                     }
                 }
                 db.PuzzleCells.AddRange(cells);
                 db.SaveChanges();
+            }
 
-                List<int> ids = db.PuzzleCells.Select(p => p.puzzleId).Distinct().OrderByDescending(p => p).ToList();
-                ids.Reverse();
+            UpdatePuzzleIds();
+        }
+
+
+        private void UpdatePuzzleIds()
+        {
+            using (var db = new PuzzleContext())
+            {
+                List<int> ids = db.PuzzleCells.Select(p => p.puzzleId).Distinct().OrderBy(p => p).ToList();
                 puzzleView.puzzleIds = ids;
-            }            
+            }                
         }
 
         private int GetLastPuzzleId()

@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using SudokuUI.Migrations;
+using System.Data.Entity;
 
 namespace SudokuUI
 {
@@ -8,8 +9,10 @@ namespace SudokuUI
 
         public PuzzleContext() : base("name=PuzzleDBConnectionString")
         {
-
+            var databaseInitializer = new DatabaseInitializer<PuzzleContext>();
+            Database.SetInitializer(databaseInitializer);
+            //Database.SetInitializer(new PuzzleDbInitializer());
         }
-        
+
     }
 }

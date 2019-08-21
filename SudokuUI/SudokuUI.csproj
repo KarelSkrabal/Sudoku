@@ -67,6 +67,7 @@
       <DependentUpon>201908211809422_initialMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Migrations\PuzzleDbInitializer.cs" />
     <Compile Include="Presenters\SudokuPresenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
