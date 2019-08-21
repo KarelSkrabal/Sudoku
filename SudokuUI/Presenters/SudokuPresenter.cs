@@ -39,9 +39,11 @@ namespace SudokuUI.Presenters
 
         private void Show(object sender, EventArgs e)
         {
-            using (var puzzles = new PuzzleContext())
+            using (var db = new PuzzleContext())
             {
-                puzzleView.puzzleIds = puzzles.PuzzleCells.Select(p => p.puzzleId).Distinct().ToList<int>();
+                List<int> ids = db.PuzzleCells.Select(p => p.puzzleId).Distinct().OrderByDescending(p => p).ToList();
+                ids.Reverse();
+                puzzleView.puzzleIds = ids;                
             }
         }
 
@@ -94,7 +96,10 @@ namespace SudokuUI.Presenters
                 }
                 db.PuzzleCells.AddRange(cells);
                 db.SaveChanges();
-                puzzleView.puzzleIds = db.PuzzleCells.Select(p => p.puzzleId).Distinct().ToList<int>();
+
+                List<int> ids = db.PuzzleCells.Select(p => p.puzzleId).Distinct().OrderByDescending(p => p).ToList();
+                ids.Reverse();
+                puzzleView.puzzleIds = ids;
             }            
         }
 
