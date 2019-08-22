@@ -9,9 +9,9 @@ namespace SudokuUI
 
         public PuzzleContext() : base("name=PuzzleDBConnectionString")
         {
-            var databaseInitializer = new DatabaseInitializer<PuzzleContext>();
-            Database.SetInitializer(databaseInitializer);
-            //Database.SetInitializer(new PuzzleDbInitializer());
+            //var databaseInitializer = new DatabaseInitializer<PuzzleContext>();
+            //Database.SetInitializer(databaseInitializer);
+            Database.SetInitializer(new PuzzleDbInitializer());
         }
 
     }

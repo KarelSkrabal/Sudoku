@@ -11,8 +11,6 @@ namespace SudokuUI.Migrations
     public class DatabaseInitializer<T> : IDatabaseInitializer<T>
         where T : PuzzleContext
     {
-        #region IDatabaseInitializer<T> Members
-
         public void InitializeDatabase(T context)
         {
             bool databaseExist = context.Database.Exists();
@@ -25,8 +23,6 @@ namespace SudokuUI.Migrations
             if (pendingMigrationsExist)
                 migrator.Update();
         }
-
-        #endregion
     }
     class PuzzleDbInitializer : DropCreateDatabaseAlways<PuzzleContext>
     {
