@@ -109,8 +109,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ClassLibrary2\Sudoku.csproj">
-      <Project>{4C0D1FEA-3344-4977-9334-D5D8E13EE2E2}</Project>
+    <ProjectReference Include="..\Sudoku\Sudoku.csproj">
+      <Project>{2c1b9220-b333-4923-a030-4c5f402fae06}</Project>
       <Name>Sudoku</Name>
     </ProjectReference>
   </ItemGroup>
